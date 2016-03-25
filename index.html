@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Unity English Turkish Dictionary </title>
+	<meta http-equiv="Content-Type" content="text/html;" charset="UTF-8">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="http://malsup.github.com/jquery.form.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js"></script>
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+	<script type="text/javascript" src="unity.js"></script>
+	<style>
+		body {
+			background-color: #FF8000;
+
+		}
+
+		#logo{
+			display: inline-block;
+			float: left;
+		}
+		#heading {
+			display: inline-block;
+			margin-left: 290px;
+			font-size: 50px;
+			color: white;
+			clear: both;
+            padding-top: 20px;
+		}
+		#flagDiv{
+			display: inline-block;
+			float: right;
+			background-color: white;
+		}
+		.flags{
+			margin: 15px;
+            height: 80px;
+            width: 115px;
+		}
+
+		#center {
+			background-color: white;
+			height: auto; /*2500px;*/
+			width: 100%;
+			display: inline-block;
+			margin-top: 50px;
+			margin-left: auto;/*250px;*/
+            margin-right: auto;
+		}
+		#innerDiv{
+			display: block;
+			/*border: 2px solid #FF8000;*/
+			height: auto;
+			width: 750px;
+			margin-left: auto;/*130px*/
+            margin-right: auto;
+			margin-top: 50px;
+			border-radius: 35px;
+
+
+		}
+        #components{
+            padding-top: 20px;
+        }
+        .letter{
+			height: 58px;
+			width: 75px;
+			margin-left: 20px;
+			font-size: 40px;
+			background-color: #FF8000;
+			color: white;
+			display: inline-block;
+			text-align: center;
+			border-radius: 5px;
+			border: 2px ridge #61830B;
+		}
+		.letter:hover{
+			background-color: #886A08;
+			color: #FAAC58;
+			border: 2px solid white;
+		}
+		.letter:active{
+			background-color: white;
+
+		}
+		#input{
+			margin-left: 70px;
+			text-transform: lowercase;
+		}
+		#field {
+			font-size: 40px;
+			height: 55px;
+			width: 590px;
+			border: 2px solid #FF8000;
+			/*border-radius:20px;*/
+			text-align: center;
+			text-transform: lowercase;
+		}
+		#radioDiv table {
+			color: #FF8000;
+			font-size: 25px;
+			margin-top: 30px;
+			margin-left: 111px;
+		}
+		.radioButton{
+			margin: 0 15px;
+		}
+        .radioTable td{
+            padding: 10px 20px 10px 20px;
+        }
+		#buttonDiv {
+			margin-top: 25px;
+			margin-left: 265px;
+		}
+		#button {
+			height: 57px;
+			width: 150px;
+			font-size: 25px;
+			margin-left: 10px;
+			background-color: #FF8000;
+			color: white;
+			border: 2px ridge #61830B;
+		}
+		#button:hover{
+			background-color: #886A08;
+			color: #FAAC58;
+			border: 2px solid white;
+		}
+		#button:active{
+			background-color: white;
+		}
+		#outputDiv{
+			/*border: 2px solid #FF8000;*/
+			background-color: white;
+			color: #FF8000;
+			height: auto;
+			width: 725px;
+			font-size: 30px;
+			margin-left: 12px;
+			margin-top: 30px;
+			word-wrap: break-word;
+		}
+		#goldA {
+			color: white;
+			font-family: sans-serif;
+            width: 100%;
+			margin-left: auto;/*610px;*/
+            margin-right: auto;
+            text-align: center;
+		}
+	</style>
+</head>
+<body>
+<form id="turkishForm" action="unity.php" method="GET" autocomplete="off">
+	<img id="logo" src="Images\unity-logo-jpg.jpg" alt="Unity English Turkish Dictionary"/>
+	<div id="flagDiv">
+		<img class="flags" src="Images/US-Flag.gif" alt="English to Turkish"/>
+		<img class="flags" src="Images/Turkish-Flag.png" alt="Turkish to English"/>
+	</div>
+	<h1 id="heading">ENGLISH TURKISH DICTIONARY</h1>
+	<div id="center" class="container">
+		<div id="innerDiv">
+			<div id="components" class="row col-xs-12">
+				<table style="margin-left: 66px;" class="letterTable">
+                <tr>
+                    <td><p class="letter" id="p0" onclick="insertAtCaret('field', '&#x00E7;')">&#x00E7;</p></td>
+				    <td><p class="letter" id="p1" onclick="insertAtCaret('field', '&#x011F;')">&#x011F;</p></td>
+				    <td><p class="letter" id="p2" onclick="insertAtCaret('field', '&#x0131;')">&#x0131;</p></td>
+                    <td><p class="letter" id="p3" onclick="insertAtCaret('field', '&#x00F6;')">&#x00F6;</p></td>
+                    <td><p class="letter" id="p4" onclick="insertAtCaret('field', '&#x015F;')">&#x015F;</p></td>
+                    <td><p class="letter" id="p5" onclick="insertAtCaret('field', '&#x00FC;')">&#x00FC;</p></td>
+				</table>
+                    <div id="input">
+					<input type="text" id="field" name="field" maxlength="33" spellcheck ="false"/>
+				</div>
+				<div id="radioDiv">
+					<table class="radioTable">
+						<tr>
+							<td><input type="radio" class="radioButton" id="radioTR" name="radio" value="tr"
+										  checked="checked">Turkish to English</td>
+							<td><input type="radio" class="radioButton" id="radioEN" name="radio" value="en"
+								>English to
+								Turkish</td>
+						</tr>
+					</table>
+					</table>
+				</div>
+				<div id="buttonDiv">
+
+					<button type="submit" id="button" value="submit"> Look Up </button>
+
+				</div>
+				<div id="outputDiv">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="goldA">
+		<p>&copy Copyright Gold Asterisk 2014 </p><p>Powered by Cevir Turkish-English Dictionary API</p><p>www.cevir.ws</p>
+	</div>
+
+</form>
+</body>
+</html>
